@@ -6,6 +6,7 @@ import changePass from '@/containers/main/personalCenter/changePass'
 import homepage from '@/containers/main/homepage/index'
 import information from '@/containers/main/information/informationView'
 import examCard from '@/containers/main/examCard/index'
+import UserManagement from '@/containers/main/UserManagement/StudentManagement'
 Vue.use(Router)
 
 export default new Router({
@@ -42,6 +43,11 @@ export default new Router({
           path: 'information/informationView',
           name: 'informationView',
           component: information,
+        },
+        {
+          path:'UserManagement/StudentManagement',
+          name:'StudentManagement',
+          component:UserManagement,
         }
       ]
     }

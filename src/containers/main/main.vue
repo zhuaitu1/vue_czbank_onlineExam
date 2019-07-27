@@ -1,15 +1,17 @@
 <template lang="html">
   <div class="main">
     <div class="left-menu">
-      <img class="logo" src="../../assets/images/logo.jpg" />
+      <img class="logo" src="../../assets/images/czbank0.jpg" />
       <el-menu
-        @select="selectItem"
-        default-active="2"
-        class="el-menu-vertical-demo">
+        @select="selectItem" default-active="2" class="el-menu-vertical-demo">
         <el-menu-item index="examOnline" >
-          <i class="el-icon-edit-outline"></i>
-          <span slot="title">在线考试</span>
+          <i class="el-icon-edit-outline">  </i>
+            <span slot="title">在线考试</span>
         </el-menu-item>
+        <el-menu-item index="StudentManagement">
+          <i class="el-icon-view"> </i>
+            <span slot="title">用户管理</span>
+          </el-menu-item>
         <el-submenu index="2">
           <template slot="title">
             <i class="el-icon-star-off"></i>
@@ -57,6 +59,8 @@ export default {
         this.$router.push('/main/personalCenter/changePass');
       }else if (command == 'information') {
         this.$router.push('/main/information/informationView');
+      }else if (command == 'StudentManagement'){
+        this.$router.push('/main/UserManagement/StudentManagement');
       }
     },
     selectItem(i) {
@@ -89,6 +93,8 @@ export default {
         this.$router.push('/main/personalCenter/changePass');
       }else if (i == 'informationView'){
         this.$router.push('/main/information/informationView');
+      }else if(i == 'StudentManagement'){
+        this.$router.push('/main/UserManagement/StudentManagement');
       }
     }
   },
